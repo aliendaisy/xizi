@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/getPrize.css">
+    <script src="../lib/jquery-1.9.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>西子小读</title>
+</head>
+<body>
+<header>
+    <p>领取奖品</p>
+</header>
+<main>
+    <section class="status">
+        <div class="text">
+            活动期间（<span id="duration"></span>）分享西子小读打卡页到朋友圈30天，可领取精美礼品一份。
+        </div>
+        <!--此处根据是否可领取状态进行判断显示-->
+        <div class="calendar">
+            <p class="success able">祝贺成功</p>
+            <p class="fail disable">还差<span id="days"></span>天</p>
+        </div>
+        <!--不可领取状态-->
+        <div class="btnBox disable">
+            <div class="shareBtn">
+                <p>去阅读并分享</p>
+            </div>
+        </div>
+    </section>
+    <!--可领取状态-->
+    <div class="instruct able">
+        <p>领取说明:</p>
+        <p>1、领取地点: <span id="address"></span></p>
+        <div>
+            <p>2、领取步骤:</p>
+            <p class="indent">a.到领取地点;</p>
+            <p class="indent">b.展示该页面，并将您的客服支持号<span class="redFont" id="code"></span>给店员;</p>
+            <p class="indent">c.店员提供奖品，即领奖成功。</p>
+        </div>
+    </div>
+    <section class="details">
+        <p class="title">可领奖品</p>
+        <div class="imgBox">
+            <img src="../images/getPrize/test.png" alt="" id="prizeUrl">
+        </div>
+        <p class="name" id="prizeName">杭州茶爽1瓶</p>
+    </section>
+</main>
+<script src="../js/getPrize.js"></script>
+</body>
+</html>

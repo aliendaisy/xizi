@@ -1,0 +1,61 @@
+main{
+    padding-top: 1.8rem;
+}
+main.transfer{
+    padding-top: 1.92rem;
+}
+
+
+.icon,.text,.btnArea,.QR-code,.info{
+    margin: 0 auto;
+    text-align: center;
+}
+.icon{
+    width: 1.28rem;
+    height: 1.28rem;
+}
+.text{
+    font-size: .36rem;
+    color: rgb(51,51,51);
+    padding: 1.16rem 0 1rem;
+}
+.code-text{
+    padding: 0 0 .96rem;
+}
+.QR-code{
+    width: 2.8rem;
+    height: 2.8rem;
+    box-sizing: border-box;
+    border: 1px solid rgb(150,150,150);
+    background: rgb(215,215,215);
+    overflow: hidden;
+}
+.info{
+    padding-top: .12rem;
+    font-size: .24rem;
+    color: rgb(51,51,51);
+}
+
+.btnArea{
+    width: 4.1rem;
+}
+.btn{
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    border-radius: .1rem;
+    text-align:center;
+    font-size: .34rem;
+    box-sizing: border-box;
+}
+.btn1{
+    background: linear-gradient(165deg,#e0cf91 0%,#bea258 100%);
+    color: #fff;
+    margin-bottom: .4rem;
+}
+.btn2{
+    background: #fff;
+    border: 1px solid #b19247;
+    color: rgb(177,146,71);
+}
+

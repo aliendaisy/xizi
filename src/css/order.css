@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'FZQY';
+    src: url("../fonts/FZQY.ttf");
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    background: url("../images/order/pic_function_02.jpg") no-repeat;
+    background-size: 100%;
+    font-family: 'FZQY';
+    font-size: .28rem;
+    color: rgb(27,27,27);
+}
+.title p:nth-of-type(1){
+    padding-bottom: .16rem;
+}
+.title .special{
+    font-size: .32rem;
+    color: rgb(225,36,35);
+    font-weight: bold;
+}
+.main-bg{
+    width: 100%;
+    height: 24.8rem;  /*此处最好切图切到西湖图案底，高度为重新切图后的高度*/
+    background: url("../images/order/pic_function_03.jpg") no-repeat;
+    background-size: 100%;
+}
+.footer{
+    background: rgb(251,251,239);
+    width: 100%;
+}
+.footer .carousel{
+    width: 100%;
+    height: 4rem;
+    padding: .3rem .28rem .4rem;
+    margin-bottom: .48rem;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.5);
+}
+.footer .carousel .cap{
+    font-size: .28rem;
+    color: rgb(51,51,51);
+}
+.footer .swiper-container{
+    padding-top: .4rem;
+}
+.footer .swiper-wrapper{
+    width: 100%;
+}
+.footer .swiper-slide{
+    margin-right: .36rem;
+}
+.footer .swiper-slide:last-child{
+    margin-right: 0;
+}
+.book-img{
+    width: 1.48rem;
+    height: 2.1rem;
+    border-radius: .04rem;
+}
+.book-time{
+    padding-top: .2rem;
+    font-size: .24rem;
+    color: rgb(153,153,153);
+    text-align: center;
+}
+
+
+.footer .footer-label{
+    width: 100%;
+    height: .88rem;
+    display: flex;
+}
+.footer .footer-label:nth-of-type(2){
+    margin-bottom: .34rem;
+}
+.footer .footer-label div{
+    display: flex;
+    height: 100%;
+}
+.priceBox{
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+    font-size: .28rem;
+    color: #999;
+}
+.priceBox p:nth-of-type(1){
+    color: #ee1c25;
+}
+.freeTime{
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+    background: rgb(241,223,181);
+    text-align: center;
+    font-size: .28rem;
+    color: rgb(51,51,51);
+}
+.orderBtn{
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(165deg,#e0cf91 0%,#bea258 100%);
+    font-size: .28rem;
+    color: #fff;
+}

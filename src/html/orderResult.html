@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/orderResult.css">
+    <script src="../lib/jquery-1.9.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>西子小读</title>
+</head>
+<body>
+    <!--以下main内容选择性显示-->
+    <!--购买成功-->
+    <main>
+        <img src="../images/orderResult/pic_success.png" alt="" class="icon">
+        <p class="text">恭喜您，免费抢购成功！</p>
+        <div class="btnArea">
+            <div class="btn btn1">
+                <p>分享给好友</p>
+            </div>
+            <div class="btn btn2">
+                <p>立即阅读</p>
+            </div>
+        </div>
+    </main>
+    <!--购买失败-->
+    <main>
+        <img src="../images/orderResult/pic_lose.png" alt="" class="icon">
+        <p class="text">很遗憾，购买失败！</p>
+        <div class="btnArea">
+            <div class="btn btn1">
+                <p>不买了直接抢</p>
+            </div>
+        </div>
+    </main>
+    <!--购买二维码样式-->
+    <main class="transfer">
+        <p class="text code-text">很遗憾，购买失败！</p>
+        <div id="QR" class="QR-code">
+            <img src="../images/getPrize/test.png" alt="">
+        </div>
+        <div class="info">
+            <p>长按识别客服二维码</p>
+            <p>下次免费抢购早知道</p>
+        </div>
+    </main>
+<script src="../js/orderResult.js"></script>
+</body>
+</html>

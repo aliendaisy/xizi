@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/welfare.css">
+    <script src="../lib/jquery-1.9.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>西子小读</title>
+</head>
+<body>
+<header>
+    <p>公益墙</p>
+</header>
+<!--这里开始不多写js请求了，时间有点紧-->
+<main>
+    <!--时间轴-->
+    <section class="timeLine">
+        <div class="header">
+            <div class="time-left">
+                <img src="../images/getPrize/test.png" alt="" id="headImg">
+            </div>
+            <p><span id="nickname">西子悦读</span>的公益墙</p>
+        </div>
+        <!--无爱心值的情况-->
+        <div class="noHeart">
+            <div class="sub-header">
+                <div class="move-box">
+                    <div class="time-left">
+                        <img src="../images/welfare/pic_gyq_heart.png" alt="">
+                    </div>
+                    <p>很遗憾，您的营养值不够，没有生成爱心</p>
+                </div>
+            </div>
+        </div>
+        <!--有爱心值的情况-->
+        <div class="hasHeart">
+            <div class="sub-header">
+                <div class="move-box">
+                    <div class="time-left">
+                        <img src="../images/welfare/pic_gyq_heart.png" alt="">
+                    </div>
+                    <div class="info">
+                        <!--heart-num内的值接口获取-->
+                        <p>已获 <span class="heart-num">5</span> 个爱心，已献 <span class="heart-num">4</span> 个爱心</p>
+                        <p>还可献 <span class="heart-num">1</span> 个爱心</p>
+                    </div>
+                </div>
+            </div>
+            <!--请求接口，一个heart-label是一个模块-->
+            <div class="heart-label">
+                <div class="move-box">
+                    <div class="time-left">
+                        <img src="../images/welfare/pic_gyq_circle.png" alt="">
+                    </div>
+                    <div class="message">
+                        <p class="cap">在"<span>为贫困山区儿童送图书</span>"爱心活动中捐出<span>1</span>本图书</p>
+                        <div class="time">
+                            <p>提交时间: <span>2018-03-22</span></p>
+                            <p>承诺完成时间: <span>2018-05-22</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="heart-label">
+                <div class="move-box">
+                    <div class="time-left">
+                        <img src="../images/welfare/pic_gyq_circle.png" alt="">
+                    </div>
+                    <div class="message">
+                        <p class="cap">在"<span>短</span>"爱心活动中捐出<span>1</span>本图书</p>
+                        <div class="time">
+                            <p>提交时间: <span>2018-03-22</span></p>
+                            <p>承诺完成时间: <span>2018-05-22</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="heart-label">
+                <div class="move-box">
+                    <div class="time-left">
+                        <img src="../images/welfare/pic_gyq_circle.png" alt="">
+                    </div>
+                    <div class="message">
+                        <p class="cap">在"<span>短</span>"爱心活动中捐出<span>1</span>本图书</p>
+                        <div class="time">
+                            <p>提交时间: <span>2018-03-22</span></p>
+                            <p>承诺完成时间: <span>2018-05-22</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--块式卡片布局-->
+    <section class="card-box">
+        <div class="caption">公益项目</div>
+        <div class="card-content">
+            <!--从接口获取数据时，在card-last前面放入card-flex模块-->
+            <div class="card-flex">
+                <img src="../images/getPrize/test.png" alt="">
+                <p class="summary">为贫困山区儿童献爱心</p>
+                <div class="btn">
+                    <p>献爱心</p>
+                </div>
+            </div>
+            <div class="card-flex">
+                <img src="../images/getPrize/test.png" alt="">
+                <p class="summary">为贫困山区儿童献爱心</p>
+                <div class="btn btn-disable">
+                    <p>献爱心</p>
+                </div>
+            </div>
+            <div class="card-flex">
+                <img src="../images/getPrize/test.png" alt="">
+                <p class="summary">为贫困山区儿童献爱心</p>
+                <div class="btn btn-disable">
+                    <p>献爱心</p>
+                </div>
+            </div>
+            <div class="card-flex">
+                <img src="../images/getPrize/test.png" alt="">
+                <p class="summary">为贫困山区儿童献爱心</p>
+                <div class="btn btn-disable">
+                    <p>献爱心</p>
+                </div>
+            </div>
+            <div class="card-flex card-last">
+                <div class="continued"></div>
+                <p class="summary">敬请期待...</p>
+            </div>
+        </div>
+    </section>
+    <!--行状卡片布局-->
+    <section class="card-label-box">
+        <div class="caption">往期公益报道</div>
+        <div class="card-label">
+            <img src="../images/getPrize/test.png" alt="">
+            <div class="details">
+                <div>
+                    <p class="title">为贫困山区捐1000本书</p>
+                    <p class="content">很长很长很长的文案很长很长很长的文案很长很长很长的文案很长很长很长的文案很长很长很长的文案很长很长很长的文案</p>
+                </div>
+                <p class="time">2018-05-03</p>
+            </div>
+        </div>
+        <div class="card-label">
+            <img src="../images/getPrize/test.png" alt="">
+            <div class="details">
+                <div>
+                    <p class="title">为贫困山区捐1000本书</p>
+                    <p class="content">很短的文案</p>
+                </div>
+                <div class="time">2018-05-03</div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--这里是显示爱心去向的那个页面,不知道是不是新的页面，把整个main里的东西拷过去就能用的-->
+<main>
+    <div class="timeLine timeLine-special">
+        <div class="hasHeart">
+            <div class="sub-header sub-header-special">
+                <div class="move-box">
+                    <div class="time-left">
+                        <img src="../images/welfare/pic_gyq_heart.png" alt="">
+                    </div>
+                    <p>我的爱心去向</p>
+                </div>
+            </div>
+            <!--请求接口，一个heart-label是一个模块-->
+            <div class="heart-label">
+                <div class="move-box">
+                    <div class="time-left">
+                        <img src="../images/welfare/pic_gyq_circle.png" alt="">
+                    </div>
+                    <div class="message">
+                        <p class="cap">在"<span>为贫困山区儿童送图书</span>"爱心活动中捐出<span>1</span>本图书</p>
+                        <div class="time">
+                            <p>提交时间: <span>2018-03-22</span></p>
+                            <p>承诺完成时间: <span>2018-05-22</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="heart-label">
+                <div class="move-box">
+                    <div class="time-left">
+                        <img src="../images/welfare/pic_gyq_circle.png" alt="">
+                    </div>
+                    <div class="message">
+                        <p class="cap">在"<span>短</span>"爱心活动中捐出<span>1</span>本图书</p>
+                        <div class="time">
+                            <p>提交时间: <span>2018-03-22</span></p>
+                            <p>承诺完成时间: <span>2018-05-22</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="heart-label">
+                <div class="move-box">
+                    <div class="time-left">
+                        <img src="../images/welfare/pic_gyq_circle.png" alt="">
+                    </div>
+                    <div class="message">
+                        <p class="cap">在"<span>短</span>"爱心活动中捐出<span>1</span>本图书</p>
+                        <div class="time">
+                            <p>提交时间: <span>2018-03-22</span></p>
+                            <p>承诺完成时间: <span>2018-05-22</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="../js/welfare.js"></script>
+</body>
+</html>

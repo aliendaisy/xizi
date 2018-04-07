@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/game.css">
+    <script src="../lib/jquery-1.9.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <title>西子小读</title>
+</head>
+<body>
+<main>
+    <aside>
+        <div class="icon">
+            <img src="../images/game/icon_yyz_star.png" alt="">
+            <p>攻略</p>
+        </div>
+        <div class="icon" id="gift">
+            <img src="../images/game/icon_yyz_gift.png" alt="">
+            <p>礼物</p>
+        </div>
+        <div class="icon">
+            <img src="../images/game/icon_yyz_heart.png" alt="">
+            <p>公益</p>
+        </div>
+        <div class="icon">
+            <img src="../images/game/icon_yyz_coin.png" alt="">
+            <p>锋阅币</p>
+        </div>
+        <div class="icon">
+            <img src="../images/game/icon_yyz_water.png" alt="">
+            <p>营养值</p>
+            <p class="sm-font" id="health-num">28000</p>
+        </div>
+    </aside>
+    <!--侧边弹出框-->
+    <div class="dialog"></div>
+    <!--浮动广告-->
+    <div class="ad">
+        <img src="../images/game/pic_biggift.png" alt="">
+    </div>
+    <!--营养值气泡容器-->
+    <div class="bubble-area"></div>
+    <!--小船-->
+    <div class="boat">
+        <img src="../images/game/pic_game_boat.png" alt="">
+    </div>
+    <!--底部沙滩-->
+    <div class="beach">
+        <div class="left">
+            <div class="header">
+                <img src="../images/getPrize/test.png" alt="">
+            </div>
+            <div class="label">
+                <p>0/0</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="../images/game/icon_board.png" alt="">
+        </div>
+    </div>
+</main>
+<!--转场动画-->
+<div class="cloud">
+    <img src="../images/game/pic_cloud_left.png" alt="" class="left-cloud">
+    <img src="../images/game/pic_cloud_right.png" alt="" class="right-cloud">
+</div>
+<!--底部tab-->
+<footer>
+    <div class="tab">
+        <img src="../images/tabs/icon_calendar_grey.png" alt="">
+        <p>日历</p>
+    </div>
+    <div class="tab">
+        <img src="../images/tabs/icon_book_grey.png" alt="">
+        <p>日读</p>
+    </div>
+    <div class="tab tab-active">
+        <img src="../images/tabs/icon_water_golden.png" alt="">
+        <p>营养值</p>
+    </div>
+    <div class="tab">
+        <img src="../images/tabs/icon_mine_grey.png" alt="">
+        <p>我的</p>
+    </div>
+</footer>
+<script src="../js/game.js"></script>
+</body>
+</html>

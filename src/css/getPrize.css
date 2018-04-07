@@ -1,0 +1,97 @@
+.status{
+    padding: .36rem .4rem .92rem;
+}
+.status .text{
+    font-size: .28rem;
+    color: #333;
+    padding-bottom: .28rem;
+}
+.status .calendar{
+    position: relative;
+    width: 1.46rem;
+    height: 1.46rem;
+    margin: 0 auto;
+    background: url("../images/getPrize/pic_countdown.png") no-repeat;
+    background-size: 100%;
+}
+.status .calendar p{
+    width: 61%;
+    height: 77%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: .4rem;
+    line-height: 0.53rem;
+    text-align: justify;
+}
+.status .calendar p:after{ /*文字自适应两端对齐布局*/
+    content: "";
+    width: 100%;
+    display: inline-block;
+}
+.status .calendar .success{
+    color: #ff2d2d;
+}
+.status .calendar .fail{
+    color: #666;  /*颜色值未给出，需要调整*/
+}
+
+/*可领取初始隐藏*/
+.instruct{
+    padding: .5rem .4rem .76rem;
+    border-top: 1px solid #e6e6e6;
+    font-size: .28rem;
+    color: #333;
+}
+.instruct .indent{
+    text-indent: .2rem;
+}
+
+
+.btnBox{
+    padding-top: .84rem;
+}
+.btnBox .shareBtn{
+    margin: 0 auto;
+    width: 4.1rem;
+    height: .8rem;
+    line-height: .8rem;
+    background-image: linear-gradient(165deg,#e0cf91 0%,#bea258 100%);
+    border-radius: .1rem;
+}
+.btnBox .shareBtn p{
+    color: #fff;
+    font-size: .34rem;
+    text-align: center;
+}
+
+
+.details{
+    padding: 0 .4rem .4rem;
+}
+.details .title{
+    font-size: .32rem;
+    color: #333;
+    padding-bottom: .2rem;
+}
+.details .imgBox{
+    width: 100%;
+    height: 2.4rem;
+    padding-bottom: .3rem;
+    overflow: hidden;
+}
+.details .imgBox img{
+    border-radius: .16rem;
+}
+.details .name{
+    font-size: .28rem;
+    color: #333;
+}
+
+
+.able{
+    display: none;
+}

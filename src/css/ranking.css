@@ -1,0 +1,98 @@
+body{
+    background: #f5f5f5;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: .52rem;
+    padding: 0 .3rem 0 .4rem;
+    background: #dfdfdf;
+    font-size: .24rem;
+}
+.card{
+    height: 1.68rem;
+    padding: 0 .24rem 0 .36rem;
+    border-bottom: 1px solid #e6e6e6;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+.card .rank{
+    font-size: .32rem;
+    color: #333;
+    min-width: .3rem; /*上下对齐*/
+    width: .3rem;
+    text-align: center;
+}
+.card .imgUrl{
+    min-width: 1rem;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 .16rem 0 .2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.card .imgUrl img{
+    height: 100%;
+}
+.card .details{
+    min-height: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.card .details .line{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .nickname{
+    font-size: .28rem;
+    color: #333;
+}
+.card .company{
+    font-size: .24rem;
+    color: #666;
+}
+.card .column{
+    font-size: .24rem;
+    color: #999;
+}
+.card .health{
+    font-size: .28rem;
+    color: #5382fb;
+}
+
+#ranking-list{
+    margin-top: .18rem;
+}
+
+.ad{
+    width: 1.8rem;
+    position: absolute;
+    bottom: .5rem;
+    right: .2rem;
+    animation: shake linear 2s infinite;
+}
+
+@keyframes shake{
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-7%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(7%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

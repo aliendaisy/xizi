@@ -1,0 +1,36 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+main{
+    min-height: calc(100% - .8rem);
+    background: url("../images/rule/pic_prize_bg.png");
+    background-size: 100%;
+}
+.caption{
+    padding: .26rem 0 .88rem 0;
+    font-size: .28rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+.rules{
+    padding: 0 .3rem 0 .36rem;
+}
+.rules .item{
+    padding-bottom: .5rem;
+}
+.rules .item .title{
+    font-size: .28rem;
+    color: #333;
+    font-weight: bold;
+}
+.rules .item .content{
+    font-size: .28rem;
+    color: #333;
+}
+.rules .info{
+    padding: .4rem 0;
+    font-size: .26rem;
+    color: #333;
+}
