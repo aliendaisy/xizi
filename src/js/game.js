@@ -93,3 +93,51 @@ $('#gift').click(function() {
         $('.dialog').append(dialog);
     },1000);
 });
+
+//场景切换
+function change(url) {
+    $('.right-cloud').css({animation: 'cloudRight ease-in-out 5s'});
+    $('.left-cloud').css({animation: 'cloudLeft ease-in-out 5s'});
+
+    //切换背景图片
+    setTimeout(function() {
+        $('main').css({
+            "background": 'url(' + url + ') no-repeat',
+            "backgroundSize": '100%'
+        });
+    },2500);
+
+    //转场动画结束后恢复初始化状态
+    $('.right-cloud,.left-cloud').on('animationend',function() {
+        $(this).css({animation: 'none'});
+    });
+}
+
+//这里写的是假数据，实际根据接口
+var healthNum = 0;
+var time = setInterval(function() {
+    healthNum += 1000;
+    console.log(healthNum)
+    if(healthNum >= 6000) {
+        clearInterval(time);
+        return;
+    }
+    if(healthNum >= 4000) {
+        change("../images/game/pic_game_bg3.png");
+    }else if(healthNum >= 2000) {
+        change("../images/game/pic_game_bg2.png");
+    }
+
+    judgeBg();
+
+},5000);
+
+//判断是否是场景3显示爱心
+function judgeBg() {
+    var mainBg = $('main').css('backgroundImage').split("(")[1].split(")")[0];
+    var str = mainBg.substr(mainBg.length - 6);
+    if(str === '3.png"') {
+        $('.heart').show();
+    }
+}
+judgeBg();
