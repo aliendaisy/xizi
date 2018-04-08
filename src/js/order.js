@@ -15,3 +15,13 @@ var mySwiper = new Swiper('.swiper-container', {
     freeMode: true,
     width: 1.48 * base,
 });
+
+
+var flag = true;
+if(flag) {
+    $('.freeTime').show();
+    $('.orderBtn').hide();
+}else{
+    $('.freeTime').hide();
+    $('.orderBtn').show();
+}
