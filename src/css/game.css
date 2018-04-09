@@ -59,10 +59,8 @@ aside .icon p.sm-font{
     justify-content: flex-end;
     align-items: center;
     position: absolute;
-    /*width: 2.14rem;*/
-    /*height: .8rem;*/
-    width: 0;
-    height: 0;
+    width: 2.14rem;
+    height: .8rem;
     left: 1.2rem;
     top: 1.24rem;
     background: url("../images/game/pic_bubble.png") no-repeat;
@@ -70,6 +68,7 @@ aside .icon p.sm-font{
     font-size: .2rem;
     color: rgb(90,137,246);
     text-align: left;
+    opacity: 0;
     transition: 1s;
 }
 .dialog p{
@@ -209,6 +208,7 @@ aside .icon p.sm-font{
     position: absolute;
     top: 0;
     width: 100%;
+    overflow: hidden;
 }
 .right-cloud{
     position: absolute;

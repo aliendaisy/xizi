@@ -32,27 +32,45 @@ $('.tab').click(function() {
 var base = document.documentElement.clientWidth / 750 * 100;
 
 var bubble = [
-    10,20,10,20,5
+    10,20,10,20,5,10
 ];
+var randomArr = [];
+//len参数为后台返回气泡的数量;limit为气泡两两重叠范围限值（以bubble-area百分比计算）
+function createRandomArray(len,limit) {
+    do{
+        var randomX = Math.random();
+        var randomY = Math.random();
 
-$.each(bubble,function() {
-    var randomX = (Math.random() * 100) + '%';
-    var randomY = (Math.random() * 100) + '%';
-    if(this <= 10) {
-        var light =
-            '<div class="bubble bubble-light" style="bottom:' + randomY + ';right:' + randomX + '">' +
-                '<p>营养值</p>' +
-                '<p>+' + this + '</p>' +
-            '</div>';
-        $('.bubble-area').append(light);
-    }else{
-        var dark =
-            '<div class="bubble bubble-dark" style="bottom:' + randomY + ';right:' + randomX + '">' +
-                '<p>营养值</p>' +
-                '<p>+' + this + '</p>' +
-            '</div>';
-        $('.bubble-area').append(dark);
+        if(randomArr.length > 0) {
+            var flag = false; //是否push到数组里的必要条件
+            $.each(randomArr,function(index) {
+                var distance = Math.sqrt(Math.pow((randomX - this.x),2) + Math.pow((randomY - this.y),2));
+                if(distance < limit) {
+                    flag = true;
+                }
+                //所有项均满足，才push到数组里
+                if(!flag && index === randomArr.length - 1) {
+                    randomArr.push({x: randomX,y: randomY});
+                }
+            });
+        }else{
+            randomArr.push({x: randomX,y: randomY});
+        }
     }
+    while(randomArr.length < len);
+}
+createRandomArray(bubble.length,0.24);
+
+$.each(bubble,function(index) {
+    var x = (randomArr[index].x * 100) + '%';
+    var y = (randomArr[index].y * 100) + '%';
+    var bubbleColor = this <= 10 ? "light" : "dark";
+    var template =
+        '<div class="bubble bubble-' + bubbleColor + '" style="bottom:' + y + ';right:' + x + '">' +
+            '<p>营养值</p>' +
+            '<p>+' + this + '</p>' +
+        '</div>';
+    $('.bubble-area').append(template);
 });
 
 //营养值收取
@@ -82,17 +100,6 @@ $('.bubble').click(function() {
     },500);
 });
 
-//礼物处弹出框动画
-var dialog = '<p>再分享<span>X</span>天就可以领取礼物了哦</p>';
-$('#gift').click(function() {
-    $('.dialog').css({
-        width: 2.14 * base,
-        height: .8 * base
-    });
-    setTimeout(function() {
-        $('.dialog').append(dialog);
-    },1000);
-});
 
 //场景切换
 function change(url) {
@@ -141,3 +148,16 @@ function judgeBg() {
     }
 }
 judgeBg();
+
+
+window.onload = function() {
+    //礼物处弹出框悬停10秒隐藏
+    var dialog = '<p>再分享<span>X</span>天就可以领取礼物了哦</p>';
+    $('.dialog').append(dialog);
+    setTimeout(function() {
+        $('.dialog').css({opacity: 1});
+    },400);
+    setTimeout(function() {
+        $('.dialog').css({opacity: 0});
+    },10000);
+};

@@ -16,7 +16,7 @@ var mySwiper = new Swiper('.swiper-container', {
     width: 1.48 * base,
 });
 
-
+//orderBtn和freeTime根据判断显示
 var flag = true;
 if(flag) {
     $('.freeTime').show();

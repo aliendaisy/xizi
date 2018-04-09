@@ -9,6 +9,9 @@ img{
 ul,li{
     list-style: none;
 }
+div,img,p,a{
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
 header{
     box-sizing: border-box;
     width: 100%;
@@ -38,7 +41,7 @@ footer{
 footer .tab{
     flex: 1;
     text-align: center;
-    color: rgb(153,153,153);
+    color: #666;
 }
 footer .tab-active{
     color: rgb(177,146,71);
